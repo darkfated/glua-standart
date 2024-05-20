@@ -107,6 +107,7 @@ local long_identifier = 2
 util.AddNetworkString("GangSystem-InvitePlayer")
 util.AddNetworkString("HatShop-Buy")
 ```
+16. When writing a block/blocks of code, use the same style of variable names
 
 ## 2. File Structure
 1. GLua files should be named in lowercase
