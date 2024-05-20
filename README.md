@@ -52,7 +52,7 @@ end
 ```
 7. Functions and methods have uppercase syntax, object properties are always lowercase
 8. Arguments in functions are lowercase
-9. Prefer using Is when naming boolean functions
+9. Prefer using `Is` when naming boolean functions
 ```lua
 local function IsEven(x)
     return x % 2 == 0
