@@ -101,6 +101,12 @@ end
 local a               = 1
 local long_identifier = 2
 ```
+15. Use the name of the net requests, taking into account the script/addon to which they belong, and what role they perform
+```lua
+-- Examples
+util.AddNetworkString("GangSystem-InvitePlayer")
+util.AddNetworkString("HatShop-Buy")
+```
 
 ## 2. File Structure
 1. GLua files should be named in lowercase
