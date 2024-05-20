@@ -32,7 +32,7 @@ function foo( x )
 end
 
 local tabl = { key = "value" }
-local myArray = [ 1, 2, 3, 4, 5 ]
+local myArray = { 1, 2, 3, 4, 5 }
 ```
 5. If an invisible VGUI element is needed, do not create an empty paint function - assign it to `nil`
 ```lua
