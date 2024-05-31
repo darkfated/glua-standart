@@ -107,7 +107,14 @@ local long_identifier = 2
 util.AddNetworkString("GangSystem-InvitePlayer")
 util.AddNetworkString("HatShop-Buy")
 ```
-16. When writing a block/blocks of code, use the same style of variable names
+16. When sending a net request, the nested syntax of the writing data should be preserved
+```lua
+net.Start("Test")
+    net.WriteString("Hello World")
+    net.WriteTable({6, 8, 10, 12})
+net.SendToServer()
+```
+17. When writing a block/blocks of code, use the same style of variable names
 
 ## 2. File Structure
 1. GLua files should be named in lowercase
