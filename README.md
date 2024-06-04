@@ -143,7 +143,7 @@ local pl_nick = LocalPlayer():Name()
 
 pnl.Paint = function(_, w, h)
     draw.RoundedBox(6, 0, 0, w, h, color_black)
-    draw.SimpleText(pl_nick, "Trebuchet24", w * 0.5, h * 0.5, color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+    draw.SimpleText(pl_nick, "Trebuchet24", w * 0.5, h * 0.5, color_white, 1, 1)
 end
 ```
 
