@@ -115,6 +115,37 @@ net.Start("Test")
 net.SendToServer()
 ```
 17. When writing a block/blocks of code, use the same style of variable names
+18. The name of the hook should indicate the addon/script to which the code and the meaning of the hook belong
+```lua
+hook.Add("PlayerSay", "AutoDonate.OpenMenu", function(pl, text)
+    if text == "/donate" then
+        pl:ConCommand("autodonate_menu")
+    end
+end)
+```
+19. During the declaration of color and material variables, their affiliation is indicated
+```lua
+local color_button = Color(75, 75, 75)
+local mat_medal = Material("icon16/rosette.png")
+```
+19. If there is an iteration in the code block, cache the variables
+```lua
+local color_text = Color(25, 25, 25)
+
+hook.Add("HUDPaint", "CustomHUD.Test", function()
+    draw.SimpleText("Hello there", "TargetID", 25, 25, color_text)
+end)
+```
+```lua
+-- Somewhere during the creation of the interface
+
+local pl_nick = LocalPlayer():Name()
+
+pnl.Paint = function(_, w, h)
+    draw.RoundedBox(6, 0, 0, w, h, color_black)
+    draw.SimpleText(pl_nick, "Trebuchet24", w * 0.5, h * 0.5, color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
+end
+```
 
 ## 2. File Structure
 1. GLua files should be named in lowercase
